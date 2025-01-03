@@ -1,0 +1,31 @@
+.cardWrapper {
+  @apply overflow-hidden transition-transform transform hover:scale-105 min-h-[300px];
+
+  >.cardContent {
+    @apply flex flex-col md:flex-row w-full h-full p-0;
+
+    >.imageSection {
+      @apply flex w-full md:w-1/2;
+
+      >.imageSectionCard {
+        @apply w-full m-4 md:m-8 overflow-hidden rounded-xl;
+      }
+    }
+
+    >.textSection {
+      @apply flex w-full md:w-1/2 border-l flex-col p-4 md:p-6;
+
+      .buttonLink {
+        @apply m-0 p-0 text-xl md:text-2xl font-bold mb-2 md:mb-4;
+      }
+
+      > p {
+        @apply mb-4 line-clamp-4;
+      }
+
+      >.stack {
+        @apply mt-auto flex flex-wrap space-x-2;
+      }
+    }
+  }
+}

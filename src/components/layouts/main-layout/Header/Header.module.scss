@@ -1,0 +1,29 @@
+.header {
+    @apply flex justify-center items-center p-3 relative;
+    backdrop-filter: blur(10px);
+
+    >.navigation{
+        @apply flex items-center justify-center w-full;
+    }
+
+    .navsButtons {
+        @apply gap-5 hidden md:flex
+    }
+}
+
+.headerUser {
+    @apply flex items-center;
+}
+
+.scrollBorder {
+    @apply bg-primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+}
+
+.sticky {
+    @apply w-[100%] top-0 fixed border-b;
+    z-index: 100;
+}

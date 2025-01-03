@@ -1,0 +1,24 @@
+.imagesGallery {
+    @apply flex flex-col items-center m-0 border-primary;
+
+    > .mainImage {
+        margin: 0;
+    }
+
+    .thumbnails {
+        @apply flex flex-wrap justify-center mt-3 gap-2;
+
+        > img.active {
+            border: 2px solid blue;
+        }
+    }
+
+    > .buttons {
+        @apply flex items-center;
+
+        > button {
+            @apply mt-2 mx-1;
+            cursor: pointer;
+        }
+    }
+}

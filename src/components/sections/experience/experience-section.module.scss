@@ -1,0 +1,19 @@
+.wrapper {
+    @apply flex flex-col items-center justify-start mb-5;
+
+    .topBlock {
+        @apply grid grid-cols-1 gap-6 max-w-5xl mx-auto px-4;
+    }
+
+    .card {
+        @apply shadow-lg transition-transform transform hover:scale-105;
+    }
+
+    p {
+        @apply leading-relaxed;
+    }
+
+    span {
+        @apply text-primary font-semibold;
+    }
+}

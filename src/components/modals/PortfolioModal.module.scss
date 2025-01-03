@@ -1,0 +1,23 @@
+.cardWrapper {
+  @apply max-w-[20rem] md:max-w-[50rem] shadow-lg rounded-lg p-4;
+
+  .cardContent {
+    @apply flex flex-col items-center justify-center overflow-auto;
+
+    > .cardImages {
+      @apply w-full overflow-hidden rounded-xl;
+    }
+
+    > .cardDesc {
+      @apply flex flex-col max-h-52;
+
+      h1 {
+        @apply text-lg font-semibold;
+      }
+
+      p {
+        @apply shadow-sm text-sm;
+      }
+    }
+  }
+}

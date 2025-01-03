@@ -1,0 +1,27 @@
+.wrapper {
+    @apply flex flex-col items-center justify-start mb-5;
+
+    .gridCols {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4;
+
+        >.cardStack {
+            @apply flex flex-col items-center transition-transform transform hover:scale-105;
+
+            .card {
+                @apply w-full shadow-xl;
+            }
+
+            .cardIcon {
+                @apply flex justify-center items-center mt-4;
+
+                >.icon {
+                    @apply text-5xl text-primary transition-transform transform hover:scale-110;
+                }
+            }
+
+            &:nth-child(even) {
+                @apply flex-col-reverse;
+            }
+        }
+    }
+}

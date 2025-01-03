@@ -1,0 +1,19 @@
+.wrapper {
+  @apply flex flex-col h-full items-center justify-center;
+
+  .cardWrapper{
+    @apply flex flex-col items-center justify-center max-w-full md:max-w-[60%];
+
+    >.cardContent{
+      @apply flex flex-col items-center justify-center w-full;
+    }
+
+    .cardImages{
+      @apply flex items-center justify-center w-full;
+    }
+
+    .stack{
+      @apply flex flex-wrap items-start justify-start gap-5 w-full;
+    }
+  }
+}
