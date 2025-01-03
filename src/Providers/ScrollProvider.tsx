@@ -1,11 +1,11 @@
 import React, { createContext, useRef, useContext, ReactNode } from 'react';
 
 type SectionRefs = {
-    mainSection: React.RefObject<HTMLDivElement>;
-    aboutSection: React.RefObject<HTMLDivElement>;
-    mystackSection: React.RefObject<HTMLDivElement>;
-    portfolioSection: React.RefObject<HTMLDivElement>;
-    experienceSection: React.RefObject<HTMLDivElement>;
+    mainSection: React.RefObject<HTMLDivElement | null>;
+    aboutSection: React.RefObject<HTMLDivElement | null>;
+    mystackSection: React.RefObject<HTMLDivElement | null>;
+    portfolioSection: React.RefObject<HTMLDivElement | null>;
+    experienceSection: React.RefObject<HTMLDivElement | null>;
 };
 
 interface ScrollContextType {
@@ -21,16 +21,16 @@ interface ScrollProviderProps {
 
 export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
     const sectionRefs: SectionRefs = {
-        mainSection: useRef<HTMLDivElement>(null),
-        aboutSection: useRef<HTMLDivElement>(null),
-        mystackSection: useRef<HTMLDivElement>(null),
-        portfolioSection: useRef<HTMLDivElement>(null),
-        experienceSection: useRef<HTMLDivElement>(null)
+        mainSection: useRef<HTMLDivElement | null>(null),
+        aboutSection: useRef<HTMLDivElement | null>(null),
+        mystackSection: useRef<HTMLDivElement | null>(null),
+        portfolioSection: useRef<HTMLDivElement | null>(null),
+        experienceSection: useRef<HTMLDivElement | null>(null)
     };
 
     const scrollToSection = (sectionKey: keyof SectionRefs) => {
         const ref = sectionRefs[sectionKey];
-        if (ref && ref.current) {
+        if (ref.current) { // Проверяем только ref.current
             ref.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
