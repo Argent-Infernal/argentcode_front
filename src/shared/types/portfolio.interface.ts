@@ -1,5 +1,5 @@
 export interface IPortfolioItem {
-    id: string
+    id: number
     title: string
     description: string
     images: string[]

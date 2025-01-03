@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { userService } from "@/services/user.service";
 import { portfolioService } from "@/services/portfolio.service";
 import { useMemo } from "react";
 import { useParams } from "next/navigation";

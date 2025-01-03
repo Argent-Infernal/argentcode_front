@@ -6,10 +6,17 @@ import { Button } from '@/components/ui/button';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { PUBLIC_URL } from '@/config/url.config';
-import { useProfile } from '@/hooks/queries/users/useProfile';
 import { useScroll } from '@/Providers/ScrollProvider';
-import {HeaderUser} from './HeaderUser';
 import {usePathname, useRouter} from "next/navigation";
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+
+const buttons = [
+    {title: "Главная", link: "mainSection"},
+    {title: "О себе", link: "aboutSection"},
+    {title: "Мой стек", link: "mystackSection"},
+    {title: "Портфолио", link: "portfolioSection"},
+    {title: "Опыт работы", link: "experienceSection"},
+]
 
 export default function Header() {
     const { scrollToSection } = useScroll();
@@ -64,36 +71,32 @@ export default function Header() {
                 {/* Компьютерное меню */}
 
                 <div className={styles.navsButtons}>
-                    <Button variant='ghost' onClick={()=>handleLink('mainSection')}>Главная</Button>
-                    <Button variant='ghost' onClick={()=>handleLink('aboutSection')}>О себе</Button>
-                    <Button variant='ghost' onClick={()=>handleLink('mystackSection')}>Мой стек</Button>
-                    <Button variant='ghost' onClick={()=>handleLink('portfolioSection')}>Портфолио</Button>
-                    <Button variant='ghost' onClick={()=>handleLink('experienceSection')}>Опыт работы</Button>
+                    {buttons.map((button,index)=>(
+                        <Button key={index} variant='ghost' onClick={()=>handleLink(button.link)}>{button.title}</Button>
+                    ))}
                 </div>
 
                 {/* Мобильное меню */}
 
-                {/* <div className="md:hidden">
+                <div className="md:hidden">
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
                             <Button variant='ghost'>Меню</Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent className='mt-5'>
-                            {user ? (
-                                <HeaderUserButtons/>
-                            ) : (
-                                <DropdownMenuItem asChild>
-                                    <Link href={PUBLIC_URL.auth()}><Button variant='default' className="w-full">Войти</Button></Link>
+                            {buttons.map((button,index)=>(
+                                <DropdownMenuItem key={index} asChild>
+                                    <Button variant='ghost' onClick={()=>handleLink(button.link)}>{button.title}</Button>
                                 </DropdownMenuItem>
-                            )}
+                            ))}
                         </DropdownMenuContent>
                     </DropdownMenu>
-                </div> */}
+                </div>
 
             </div>
 
             <div className={styles.navigation}>
-                <HeaderUser/>
+            {/*    <HeaderUser/>*/}
             </div>
 
             <div

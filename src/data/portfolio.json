@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Магазин мерча RussianCloth",
+      "description": "Простой и незамысловатый магазин мерча. \nАвторизация реализована через JWT, добавлена возможность входа через Google и Yandex. \nИнтегрирована оплата по ЮКасса.\nИмеется смена темы на светлую/темную.\nФункционал отзывов по персональной ссылке от администратора сайта.\nРеализована админ панель со следующим функционалом:\n\n1. Просмотр статистики\n2. Просмотр пользователей/редактирование ролей\n3. CRUD товаров,\n4. Создание персональных ссылок для оставления отзывов.\n5. Просмотр текущих заказов и изменение их статуса.",
+      "images": [
+        "/portfolio/gl1.png",
+        "/portfolio/gl2.png",
+        "/portfolio/gl3.png",
+        "/portfolio/gl4.png",
+        "/portfolio/gl5.png",
+        "/portfolio/gl6.png",
+        "/portfolio/gl7.png",
+        "/portfolio/gl8.png",
+        "/portfolio/gl9.png"
+      ],
+      "stack": "NextJS, React, TailwindCSS, SCSS, ReduxJS, TypeScript, NestJS, PostgreSQL, Prisma"
+    },
+    {
+      "id": 2,
+      "title": "Простая авторизация Material UI",
+      "description": "Простая авторизация с использованием встроенной авторизации Laravel.",
+      "images": [
+        "/portfolio/p1.png",
+        "/portfolio/p2.png"
+      ],
+      "stack": "NestJS, MaterialUI, Laravel, PHP, TypeScript, MySQL"
+    }
+  ]
+}
