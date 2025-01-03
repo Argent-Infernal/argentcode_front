@@ -25,14 +25,14 @@ const nextConfig: NextConfig = {
 		// ]
 	},
 
-	async rewrites() {
-		return [
-			{
-				source: '/uploads/:path*',
-				destination: `${process.env.SERVER_URL}/uploads/:path*`
-			}
-		]
-	}
+	// async rewrites() {
+	// 	return [
+	// 		{
+	// 			source: '/uploads/:path*',
+	// 			destination: `${process.env.SERVER_URL}/uploads/:path*`
+	// 		}
+	// 	]
+	// }
 }
 
 export default nextConfig
