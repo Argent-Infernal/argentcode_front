@@ -10,6 +10,7 @@ import '@fontsource/montserrat/500.css'
 import '@fontsource/montserrat/700.css'
 import { SITE_DESCRIPTION, SITE_NAME } from "@/constants/seo.constants"
 import { Providers } from "./providers"
+import { Analytics } from "@vercel/analytics/react"
 
 export const metadata: Metadata = {
 	title: {
@@ -31,6 +32,7 @@ export default function RootLayout({
 				<div id='root' className="dark">
 					<Providers>
 						{children}
+						<Analytics/>
 					</Providers>
 				</div>
 			</body>
