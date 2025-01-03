@@ -8,21 +8,21 @@ const nextConfig: NextConfig = {
 		SERVER_URL: process.env.SERVER_URL
 	},
 	images: {
-		remotePatterns: [
-			{
-				protocol: 'http',
-				hostname: 'localhost',
-				port: '5000',
-			},
-			{
-				protocol: 'https',
-				hostname: 'avatars.yandex.net'
-			},
-			{
-				protocol: 'https',
-				hostname: 'lh3.googleusercontent.com'
-			}
-		]
+		// remotePatterns: [
+		// 	{
+		// 		protocol: 'http',
+		// 		hostname: 'localhost',
+		// 		port: '5000',
+		// 	},
+		// 	{
+		// 		protocol: 'https',
+		// 		hostname: 'avatars.yandex.net'
+		// 	},
+		// 	{
+		// 		protocol: 'https',
+		// 		hostname: 'lh3.googleusercontent.com'
+		// 	}
+		// ]
 	},
 
 	async rewrites() {
