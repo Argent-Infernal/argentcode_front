@@ -9,8 +9,10 @@ import {
     SiSass,
     SiTailwindcss,
     SiTypescript,
-    SiMysql
+    SiMysql,
+    SiShadcnui
 } from "react-icons/si";
+
 import { FaLaravel, FaPhp } from "react-icons/fa";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
 
@@ -27,7 +29,8 @@ const techIcons: { [key: string]: () => ReactNode } = {
     materialui: ()=> <SiMui/>,
     laravel: ()=> <FaLaravel/>,
     php: () => <FaPhp/>,
-    mysql: () => <SiMysql/>
+    mysql: () => <SiMysql/>,
+    shadcn: () => <SiShadcnui/>
 
 };
 

@@ -15,7 +15,7 @@
         "/portfolio/gl8.png",
         "/portfolio/gl9.png"
       ],
-      "stack": "NextJS, React, TailwindCSS, SCSS, ReduxJS, TypeScript, NestJS, PostgreSQL, Prisma"
+      "stack": "NextJS, React, TailwindCSS, SCSS, ReduxJS, TypeScript, NestJS, PostgreSQL, Prisma, Shadcn"
     },
     {
       "id": 2,
