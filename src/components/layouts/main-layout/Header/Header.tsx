@@ -76,8 +76,9 @@ export default function Header() {
                     ))}
                 </div>
 
-                {/* Мобильное меню */}
+            </div>
 
+            <div className={styles.navigation}>
                 <div className="md:hidden">
                     <DropdownMenu>
                         <DropdownMenuTrigger asChild>
@@ -92,11 +93,6 @@ export default function Header() {
                         </DropdownMenuContent>
                     </DropdownMenu>
                 </div>
-
-            </div>
-
-            <div className={styles.navigation}>
-            {/*    <HeaderUser/>*/}
             </div>
 
             <div

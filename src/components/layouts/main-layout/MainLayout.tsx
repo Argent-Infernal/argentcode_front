@@ -7,8 +7,8 @@ import GradientLayout from "@/components/layouts/main-layout/Gradient/GradientLa
 export default function MainLayout({children}:PropsWithChildren<{}>) {
     return (
         <div className={styles.wrapper}>
+            <GradientLayout />
             <div className={styles.layout}>
-                <GradientLayout />
                 <Header/>
                 <main>{children}</main>
                 <Footer/>
