@@ -9,7 +9,6 @@ export const useGetPortfolioList = () => {
         queryFn: () => portfolioService.getAll()
     })
 
-    console.log(portfolioList, isLoading)
     return useMemo(
         () => ({
             portfolioList,
