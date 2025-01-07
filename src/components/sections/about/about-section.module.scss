@@ -10,7 +10,7 @@
     }
 
     .card {
-        @apply shadow-lg transition-transform transform hover:scale-105;
+        @apply transition-transform transform hover:scale-105;
     }
 
     p {

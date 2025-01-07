@@ -2,22 +2,21 @@
     @apply flex flex-col items-center justify-start mb-5;
 
     .gridContainer {
-        @apply grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-5xl mx-auto px-4;
-
-        h2 {
-            @apply text-center;
-        }
-
+        @apply grid grid-cols-2 lg:grid-cols-6 gap-6 w-full max-w-5xl mx-auto px-4;
     }
 
     .card {
-        @apply w-full mb-4 transition-transform transform hover:scale-105;
+        @apply transition-transform transform hover:scale-105;
 
         .cardContent {
-            @apply flex flex-row items-center justify-items-center text-center p-6 gap-2;
+            @apply p-6 size-full flex flex-col items-center justify-center gap-5;
+
+            .label {
+                @apply text-center;
+            }
 
             .icon {
-                @apply text-5xl text-primary transition-transform transform hover:scale-110;
+                @apply text-5xl text-primary relative transition-transform transform hover:scale-110;
             }
         }
     }

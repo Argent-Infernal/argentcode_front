@@ -1,0 +1,23 @@
+.gradientAnim {
+  @apply fixed inset-0;
+
+  >.gradientLayout{
+    @apply absolute inset-0;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50px, 50px); // Параметры для движения
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.moving {
+  animation: move 2s ease-in-out infinite; // Анимация будет выполняться бесконечно
+}
