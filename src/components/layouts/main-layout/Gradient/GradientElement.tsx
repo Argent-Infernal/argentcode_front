@@ -20,13 +20,13 @@ export default function GradientElement({startX, startY, positionRandom, classNa
 
     // Рандомизация начального направления
     const directionRef = useRef({
-        x: Math.random() < 0.5 ? speed : -speed, // Рандомизируем направление по X
-        y: Math.random() < 0.5 ? speed : -speed  // Рандомизируем направление по Y
+        x: Math.random() < 0.5 ? speed : -speed,
+        y: Math.random() < 0.5 ? speed : -speed
     });
 
     const isMobile = useIsMobile()
 
-    const elementSize = isMobile ? 200 : 384
+    const elementSize = isMobile ? 200 : 500
 
     useEffect(() => {
         let animationFrameId: number;
@@ -39,19 +39,19 @@ export default function GradientElement({startX, startY, positionRandom, classNa
                 };
 
                 // Проверяем границы по X
-                if (newOffset.x >= (window.innerWidth) + (elementSize/2)) {
+                if (newOffset.x >= (window.innerWidth)) {
                     directionRef.current.x = -speed;
-                    newOffset.x = (window.innerWidth) - (elementSize);
-                } else if (newOffset.x <= (-elementSize)) { // Левая граница
+                    newOffset.x = (window.innerWidth);
+                } else if (newOffset.x <= (0)) { // Левая граница
                     directionRef.current.x = speed;
                     newOffset.x = 0;
                 }
 
                 // Проверяем границы по Y
-                if (newOffset.y >= (window.innerHeight) + (elementSize/2)) {
+                if (newOffset.y >= (window.innerHeight)) {
                     directionRef.current.y = -speed;
-                    newOffset.y = (window.innerHeight) - (elementSize);
-                } else if (newOffset.y <= (-elementSize)) { // Верхняя граница
+                    newOffset.y = (window.innerHeight);
+                } else if (newOffset.y <= (0)) { // Верхняя граница
                     directionRef.current.y = speed;
                     newOffset.y = 0;
                 }
@@ -70,8 +70,11 @@ export default function GradientElement({startX, startY, positionRandom, classNa
 
     return (
         <div
-            className={`absolute top-0 -left-4 md:w-[30rem] md:h-[30rem] w-72 h-72 rounded-full mix-blend-multiply filter blur-[128px] bg-primary opacity-15 ${className}`}
+
+            className={`absolute rounded-full mix-blend-multiply filter blur-[128px] ${className}`}
             style={{
+                width: `${elementSize}px`,
+                height: `${elementSize}px`,
                 transform: `translate(${offset.x}px, ${offset.y}px)`,
                 transition: 'transform 0.1s ease-out'
             }}

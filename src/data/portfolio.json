@@ -19,7 +19,7 @@
     },
     {
       "id": 2,
-      "title": "Простая авторизация Material UI",
+      "title": "Авторизация Material UI",
       "description": "Простая авторизация с использованием встроенной авторизации Laravel.",
       "images": [
         "/portfolio/p1.png",

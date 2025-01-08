@@ -21,7 +21,7 @@ export default function ExperienceSection() {
                         </CardHeader>
                         <CardContent>
                             <p>
-                                Работаю с 26.12.2024, Fullstack Разработчик
+                                26.12.2024 - По настоящее время, Fullstack Web Разработчик
                             </p>
                         </CardContent>
                     </Card>

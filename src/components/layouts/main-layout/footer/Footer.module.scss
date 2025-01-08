@@ -2,6 +2,6 @@
     @apply border-t mt-16;
 
     >.footer {
-        @apply flex flex-row w-auto mx-auto py-5 text-center items-center justify-center gap-5;
+        @apply flex flex-row flex-wrap w-auto mx-auto py-5 text-center items-center justify-center gap-5;
     }
 }
